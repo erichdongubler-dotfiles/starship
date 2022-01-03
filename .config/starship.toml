@@ -1,4 +1,7 @@
 add_newline = true
 
+[directory]
+truncation_symbol = "…/"
+
 [nodejs]
 symbol = "Node "
