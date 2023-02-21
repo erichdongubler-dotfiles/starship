@@ -8,3 +8,7 @@ symbol = "📜 "
 
 [nodejs]
 symbol = "Node "
+
+[hg_branch]
+disabled = false
+truncation_symbol = "…"
