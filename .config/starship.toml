@@ -2,6 +2,27 @@
 
 add_newline = true
 
+[custom.jj_bookmark_heads]
+when = "jj root"
+symbol = "🐦 "
+command = """
+(
+	jj log
+		--no-graph
+		--revisions 'coalesce(
+			heads(::@ & bookmarks()),
+			heads(@- | present(@ ~ (empty() | description(exact:""))))
+		)'
+		--template 'coalesce(
+			bookmarks.join(" ") ++ " ",
+			change_id.shortest(),
+		)'
+)
+"""
+detect_folders = [".jj"]
+shell = ["nu", "--commands"]
+use_stdin = false
+
 [directory]
 truncation_symbol = "…/"
 
