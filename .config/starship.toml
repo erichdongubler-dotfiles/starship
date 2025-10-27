@@ -3,6 +3,9 @@ add_newline = true
 [directory]
 truncation_symbol = "…/"
 
+[git_branch]
+symbol = "\ue702 " # Nerdfont 3.0: nf-md-git
+
 [git_status]
 disabled = true
 
