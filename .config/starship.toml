@@ -15,6 +15,9 @@ disabled = true
 disabled = false
 truncation_symbol = "…"
 
+[java]
+symbol = "\ue738 "  # Nerdfont 3.0: nf-dev-java
+
 [jj_bookmark]
 truncation_length = 128
 
