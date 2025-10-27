@@ -13,5 +13,8 @@ disabled = true
 disabled = false
 truncation_symbol = "…"
 
+[python]
+symbol = "\ue73c " # Nerdfont 3.0: nf-dev-python
+
 [rust]
 symbol = "\ue7a8 " # Nerdfont 3.0: nf-dev-rust
