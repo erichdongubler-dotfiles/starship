@@ -13,6 +13,9 @@ disabled = true
 disabled = false
 truncation_symbol = "…"
 
+[java]
+symbol = "\ue738 " # Nerdfont 3.0: nf-dev-java
+
 [python]
 symbol = "\ue73c " # Nerdfont 3.0: nf-dev-python
 
