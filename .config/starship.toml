@@ -9,3 +9,6 @@ disabled = true
 [hg_branch]
 disabled = false
 truncation_symbol = "…"
+
+[rust]
+symbol = "\ue7a8 " # Nerdfont 3.0: nf-dev-rust
