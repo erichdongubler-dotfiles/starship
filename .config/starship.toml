@@ -18,3 +18,6 @@ truncation_length = 128
 [jj_status]
 description_empty = ""
 description_present = ":"
+
+[rust]
+symbol = "\ue7a8 "  # Nerdfont 3.0: nf-dev-rust
