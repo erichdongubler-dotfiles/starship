@@ -1,5 +1,19 @@
 add_newline = true
 
+[custom.jj]
+command = '''
+jj --no-pager log --revisions @ --limit 1 --ignore-working-copy --no-graph --color always  -T '
+separate(" ",
+	change_id.shortest(),
+	if(conflict, "conflict"),
+	if(divergent, "divergent"),
+	if(hidden, "hidden"),
+)
+'
+'''
+detect_folders = [".jj"]
+symbol = "🍐"
+
 [directory]
 truncation_symbol = "…/"
 
