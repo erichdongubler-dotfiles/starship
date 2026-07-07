@@ -41,6 +41,26 @@ command = """
 			change_id.shortest(),
 		)'
 )
+(
+	jj log
+		--revisions @
+		--no-graph
+		--ignore-working-copy
+		--template 'truncate_end(
+			15,
+			concat(
+				if(conflict, "="),
+				if(self.diff().files().filter(|f| f.status() == "removed"), "✘"),
+				if(self.diff().files().filter(|f| f.status() == "renamed"), "»"),
+				if(self.diff().files().filter(|f| f.status() == "modified"), "!"),
+				if(self.diff().files().filter(|f| f.status() == "added"), "?"),
+				if(!description, " "),
+				if(divergent, "⇕"),
+				if(immutable, " "),
+			),
+			"..",
+		)'
+)
 """
 detect_folders = [".jj"]
 shell = ["nu", "--commands"]
