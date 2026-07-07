@@ -24,3 +24,24 @@ symbol = "\ue73c " # Nerdfont 3.0: nf-dev-python
 
 [rust]
 symbol = "\ue7a8 " # Nerdfont 3.0: nf-dev-rust
+
+[custom.jj]
+when = "jj root"
+symbol = "🐦 "
+command = """
+(
+	jj log
+		--no-graph
+		--revisions 'coalesce(
+			heads(::@ & bookmarks()),
+			heads(@- | present(@ ~ (empty() | description(exact:""))))
+		)'
+		--template 'coalesce(
+			bookmarks.join(" ") ++ " ",
+			change_id.shortest(),
+		)'
+)
+"""
+detect_folders = [".jj"]
+shell = ["nu", "--commands"]
+use_stdin = false
