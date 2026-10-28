@@ -11,3 +11,10 @@ disabled = true
 [hg_branch]
 disabled = false
 truncation_symbol = "…"
+
+[jj_bookmark]
+truncation_length = 128
+
+[jj_status]
+description_empty = ""
+description_present = ":"
